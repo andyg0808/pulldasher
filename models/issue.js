@@ -13,8 +13,8 @@ function Issue(data) {
 }
 
 Issue.findByNumber = function(number) {
-   return DBIssue.findByNumber(number).
-   then(Issue.getFromDB);
+   return DBIssue.findByNumber(number)
+   .then(Issue.getFromDB);
 };
 
 /**
@@ -64,6 +64,9 @@ Issue.getFromGH = function(data) {
  * A factory method to create an issue from a DBIssue.
  */
 Issue.getFromDB = function(data) {
+   if (!data) {
+      return null;
+   }
    var issueData = {
       number: data.number,
       title: data.title,
