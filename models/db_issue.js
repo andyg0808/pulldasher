@@ -22,9 +22,11 @@ function DBIssue(issue) {
    if (issue.milestone) {
       this.data.milestone_title = issue.milestone.title;
       this.data.milestone_due_date = utils.toUnixTime(issue.milestone.dueDate);
+      this.data.milestone_number = issue.milestone.number;
    } else {
       this.data.milestone_title = null;
       this.data.milestone_due_date = null;
+      this.data.milestone_number = null;
    }
 }
 
