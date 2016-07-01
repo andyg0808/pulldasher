@@ -1,6 +1,6 @@
 var utils = require('../lib/utils');
 var db = require('../lib/db');
-var log = require('debug')('pulldasher:dbissue');
+var log = require('../lib/debug')('pulldasher:dbissue');
 var utils = require('../lib/utils');
 
 function DBIssue(issue) {

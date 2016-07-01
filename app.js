@@ -15,8 +15,8 @@ var config = require('./config'),
     Signature = require('./models/signature'),
     mainController = require('./controllers/main'),
     hooksController = require('./controllers/githubHooks'),
-    debug = require('debug')('pulldasher'),
-    reqLogger = require('debug')('pulldasher:server:request');
+    debug = require('./lib/debug')('pulldasher'),
+    reqLogger = require('./lib/debug')('pulldasher:server:request');
 
 var args = process.argv.slice(2);
 var app = express();

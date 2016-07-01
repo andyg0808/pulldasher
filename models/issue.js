@@ -1,7 +1,7 @@
 var utils   = require('../lib/utils');
 var _       = require('underscore');
 var config  = require('../config');
-var log     = require('debug')('pulldasher:issue');
+var log     = require('../lib/debug')('pulldasher:issue');
 var Promise = require('promise');
 var DBIssue = require('./db_issue');
 

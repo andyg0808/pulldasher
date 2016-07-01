@@ -1,6 +1,6 @@
 var utils = require('../lib/utils'),
     db = require('../lib/db'),
-    debug = require('debug')('pulldasher:db_comment');
+    debug = require('../lib/debug')('pulldasher:db_comment');
 
 /**
  * Builds an object representation of a row in the DB `comments` table
